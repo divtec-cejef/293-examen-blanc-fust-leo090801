@@ -34,7 +34,9 @@ header {
     text-align: center;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
-
+header img {
+    max-height: 80px;
+}
 /********** STYLE NAVIGATION *********/
 
 header nav ul {
@@ -51,7 +53,9 @@ header nav a {
     padding: .75em 1em;
     color: #151515;
 }
-
+header nav a:hover {
+    color: #666666;
+}
 header nav a.actif {
     color: #ff8800;
     border-bottom: 3px solid #151515;
@@ -68,16 +72,39 @@ main {
     max-width: 960px;
     margin: 0 auto;
 }
-
+main p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    max-width: 800px;
+}
+main figure h2 {
+    color: #ff8800;
+}
+main li {
+    transition: all .5s;
+}
+/**************STYLE FOOTER************/
+footer {
+    background-color: #151515;
+    margin-top: 2rem;
+    padding: 20px 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+}
 /********** PAGE NOS PRODUITS *********/
 .produits {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .produits li {
     padding: 2% 1rem;
     transition: all 0.2s ease-in-out;
+    flex-basis: 50%;
 }
 
 .produits li:hover {
@@ -88,6 +115,7 @@ main {
     text-align: center;
     margin: 0;
     padding: 1.5rem .75rem;
+    border: #151515 solid 2px;
 }
 
 .produits figcaption {
